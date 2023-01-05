@@ -1,5 +1,4 @@
 ﻿<Properties StartupConfiguration="{4D13898D-A0A1-4F55-8A2E-12ACCBC158C1}|Default">
-  <MonoDevelop.Ide.ItemProperties.BusinessServices.WC.Business.Models FirstBuild="True" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Repositories.WC.Data FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.Presentation.WebsiteCrawler PreferredExecutionTarget="/Applications/Google Chrome.app" />

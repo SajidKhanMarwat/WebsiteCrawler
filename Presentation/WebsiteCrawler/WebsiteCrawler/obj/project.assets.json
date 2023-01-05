@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "WC.Business.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/WC.Business.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WC.Business.Models.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "WC.Business.Models/1.0.0": {
+      "type": "project",
+      "path": "../../../BusinessServices/WC.Business.Models/WC.Business.Models.csproj",
+      "msbuildProject": "../../../BusinessServices/WC.Business.Models/WC.Business.Models.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "WC.Business.Models >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/sajidmarwat/.nuget/packages/": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/sajidmarwat/Desktop/WebsiteCrawler/BusinessServices/WC.Business.Models/WC.Business.Models.csproj": {
+              "projectPath": "/Users/sajidmarwat/Desktop/WebsiteCrawler/BusinessServices/WC.Business.Models/WC.Business.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

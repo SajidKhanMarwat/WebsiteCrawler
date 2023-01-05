@@ -6,6 +6,8 @@
 /Users/sajidmarwat/Desktop/WebsiteCrawler/Presentation/WebsiteCrawler/WebsiteCrawler/bin/Debug/net6.0/WebsiteCrawler.runtimeconfig.json
 /Users/sajidmarwat/Desktop/WebsiteCrawler/Presentation/WebsiteCrawler/WebsiteCrawler/bin/Debug/net6.0/WebsiteCrawler.dll
 /Users/sajidmarwat/Desktop/WebsiteCrawler/Presentation/WebsiteCrawler/WebsiteCrawler/bin/Debug/net6.0/WebsiteCrawler.pdb
+/Users/sajidmarwat/Desktop/WebsiteCrawler/Presentation/WebsiteCrawler/WebsiteCrawler/bin/Debug/net6.0/WC.Business.Models.dll
+/Users/sajidmarwat/Desktop/WebsiteCrawler/Presentation/WebsiteCrawler/WebsiteCrawler/bin/Debug/net6.0/WC.Business.Models.pdb
 /Users/sajidmarwat/Desktop/WebsiteCrawler/Presentation/WebsiteCrawler/WebsiteCrawler/obj/Debug/net6.0/WebsiteCrawler.csproj.AssemblyReference.cache
 /Users/sajidmarwat/Desktop/WebsiteCrawler/Presentation/WebsiteCrawler/WebsiteCrawler/obj/Debug/net6.0/WebsiteCrawler.GeneratedMSBuildEditorConfig.editorconfig
 /Users/sajidmarwat/Desktop/WebsiteCrawler/Presentation/WebsiteCrawler/WebsiteCrawler/obj/Debug/net6.0/WebsiteCrawler.AssemblyInfoInputs.cache
@@ -24,6 +26,7 @@
 /Users/sajidmarwat/Desktop/WebsiteCrawler/Presentation/WebsiteCrawler/WebsiteCrawler/obj/Debug/net6.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /Users/sajidmarwat/Desktop/WebsiteCrawler/Presentation/WebsiteCrawler/WebsiteCrawler/obj/Debug/net6.0/scopedcss/bundle/WebsiteCrawler.styles.css
 /Users/sajidmarwat/Desktop/WebsiteCrawler/Presentation/WebsiteCrawler/WebsiteCrawler/obj/Debug/net6.0/scopedcss/projectbundle/WebsiteCrawler.bundle.scp.css
+/Users/sajidmarwat/Desktop/WebsiteCrawler/Presentation/WebsiteCrawler/WebsiteCrawler/obj/Debug/net6.0/WebsiteCrawler.csproj.CopyComplete
 /Users/sajidmarwat/Desktop/WebsiteCrawler/Presentation/WebsiteCrawler/WebsiteCrawler/obj/Debug/net6.0/WebsiteCrawler.dll
 /Users/sajidmarwat/Desktop/WebsiteCrawler/Presentation/WebsiteCrawler/WebsiteCrawler/obj/Debug/net6.0/refint/WebsiteCrawler.dll
 /Users/sajidmarwat/Desktop/WebsiteCrawler/Presentation/WebsiteCrawler/WebsiteCrawler/obj/Debug/net6.0/WebsiteCrawler.pdb

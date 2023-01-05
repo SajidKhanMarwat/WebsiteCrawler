@@ -1,5 +1,5 @@
 ﻿namespace WC.Business.Models;
-public class Class1
+public class URLs
 {
 
 }
