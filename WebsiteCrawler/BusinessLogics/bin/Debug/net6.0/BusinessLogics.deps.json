@@ -6,14 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "WebsiteCrawler/1.0.0": {
-        "dependencies": {
-          "BusinessLogics": "1.0.0"
-        },
-        "runtime": {
-          "WebsiteCrawler.dll": {}
-        }
-      },
       "BusinessLogics/1.0.0": {
         "runtime": {
           "BusinessLogics.dll": {}
@@ -22,11 +14,6 @@
     }
   },
   "libraries": {
-    "WebsiteCrawler/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "BusinessLogics/1.0.0": {
       "type": "project",
       "serviceable": false,

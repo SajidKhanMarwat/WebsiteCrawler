@@ -1,6 +1,6 @@
 ﻿using BusinessLogics;
 using Microsoft.AspNetCore.Mvc;
-
+using WebsiteCrawler.Models;
 
 namespace WebsiteCrawler.Controllers
 {
@@ -11,11 +11,11 @@ namespace WebsiteCrawler.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Login(DBBusinessLogic businessLogic)
+        public IActionResult Login(Authentication authentication)
         {
-
-            
-
+            DBBusinessLogic dBBusiness=new DBBusinessLogic();
+            dBBusiness.Email = authentication.Email;
+            dBBusiness.Password = authentication.Password;
             return View();
         }
     }

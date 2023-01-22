@@ -29,3 +29,6 @@ C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\obj\Debug
 C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\obj\Debug\net6.0\WebsiteCrawler.pdb
 C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\obj\Debug\net6.0\WebsiteCrawler.genruntimeconfig.cache
 C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\obj\Debug\net6.0\ref\WebsiteCrawler.dll
+C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\bin\Debug\net6.0\BusinessLogics.dll
+C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\bin\Debug\net6.0\BusinessLogics.pdb
+C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\obj\Debug\net6.0\WebsiteCrawler.csproj.CopyComplete
