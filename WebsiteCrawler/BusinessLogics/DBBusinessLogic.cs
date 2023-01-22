@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLogics
 {
-    internal class DBBusinessLogic
+    public class DBBusinessLogic
     {
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 }

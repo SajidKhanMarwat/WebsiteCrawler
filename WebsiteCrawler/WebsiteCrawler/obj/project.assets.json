@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "BusinessLogics/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/BusinessLogics.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessLogics.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "BusinessLogics/1.0.0": {
+      "type": "project",
+      "path": "../BusinessLogics/BusinessLogics.csproj",
+      "msbuildProject": "../BusinessLogics/BusinessLogics.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "BusinessLogics >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\khannsaj\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\khannsaj\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\BusinessLogics\\BusinessLogics.csproj": {
+              "projectPath": "C:\\Users\\khannsaj\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\BusinessLogics\\BusinessLogics.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
