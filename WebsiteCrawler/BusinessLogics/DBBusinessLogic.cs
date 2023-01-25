@@ -8,12 +8,20 @@ namespace BusinessLogics
 {
     public class DBBusinessLogic
     {
-        public string Email { get; set; }
-        public string Password { get; set; }
+        private string DBemail { get; set; }
+        private string DBpassword { get; set; }
 
 
+        public string Email
+        {
+            get { return DBemail; }
+            set { DBemail = value; }
+        }
 
-
-
+        public string Password
+        {
+            get { return DBpassword; }
+            set { DBpassword = value; }
+        }
     }
 }

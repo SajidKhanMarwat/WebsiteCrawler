@@ -11,11 +11,9 @@ namespace WebsiteCrawler.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Login(Authentication authentication)
+        public IActionResult Login(DBBusinessLogic authentication)
         {
-            DBBusinessLogic dBBusiness=new DBBusinessLogic();
-            dBBusiness.Email = authentication.Email;
-            dBBusiness.Password = authentication.Password;
+            
             return View();
         }
     }

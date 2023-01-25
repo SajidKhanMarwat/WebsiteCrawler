@@ -10,3 +10,15 @@ C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug
 C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\net6.0\refint\BusinessLogics.dll
 C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\net6.0\BusinessLogics.pdb
 C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\net6.0\ref\BusinessLogics.dll
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\bin\Debug\net6.0\BusinessLogics.deps.json
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\bin\Debug\net6.0\BusinessLogics.dll
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\bin\Debug\net6.0\BusinessLogics.pdb
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\net6.0\BusinessLogics.csproj.AssemblyReference.cache
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\net6.0\BusinessLogics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\net6.0\BusinessLogics.AssemblyInfoInputs.cache
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\net6.0\BusinessLogics.AssemblyInfo.cs
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\net6.0\BusinessLogics.csproj.CoreCompileInputs.cache
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\net6.0\BusinessLogics.dll
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\net6.0\refint\BusinessLogics.dll
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\net6.0\BusinessLogics.pdb
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\net6.0\ref\BusinessLogics.dll
