@@ -40,6 +40,7 @@ C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\bin\Debug\n
 C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\bin\Debug\net6.0\WebsiteCrawler.runtimeconfig.json
 C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\bin\Debug\net6.0\WebsiteCrawler.dll
 C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\bin\Debug\net6.0\WebsiteCrawler.pdb
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\bin\Debug\net6.0\HtmlAgilityPack.dll
 C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

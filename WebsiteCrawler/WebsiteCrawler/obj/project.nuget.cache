@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lUAj1Rt+WweSbWvkXL0ers42CT8v9kQlRFC7AHz5fecev9iTnLBGyV9eq0xR2brsZ3o3S4382GU0QEol2xDm7g==",
+  "dgSpecHash": "i6CZCMf6T4mu7agIKvtzBeAFFCgkVK2NteYDbU1zRDka2G/H1PYv5KODP3HhqLQQ3SthY8r29aPf7U3pwHjtfQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Apollo\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\WebsiteCrawler\\WebsiteCrawler.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Apollo\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512",
     "C:\\Users\\Apollo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.13\\microsoft.aspnetcore.cryptography.internal.6.0.13.nupkg.sha512",
     "C:\\Users\\Apollo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.13\\microsoft.aspnetcore.cryptography.keyderivation.6.0.13.nupkg.sha512",
     "C:\\Users\\Apollo\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.13\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.13.nupkg.sha512",
