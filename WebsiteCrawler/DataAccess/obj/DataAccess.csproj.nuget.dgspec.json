@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Apollo\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\khannsaj\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Apollo\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\khannsaj\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Apollo\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\khannsaj\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Apollo\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Apollo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Apollo\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\khannsaj\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\khannsaj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\khannsaj\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Apollo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\khannsaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -65,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
