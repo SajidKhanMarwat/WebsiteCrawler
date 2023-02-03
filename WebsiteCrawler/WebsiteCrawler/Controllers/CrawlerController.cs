@@ -22,6 +22,8 @@ namespace WebsiteCrawler.Controllers
         {
             try
             {
+                // Initial or Main url checker
+
                 if (!inPut.Url.StartsWith("http"))
                 {
                     inPut.Url = "https://" + inPut.Url;
@@ -30,31 +32,37 @@ namespace WebsiteCrawler.Controllers
                 var htmlCode = web.Load(inPut.Url);
                 var href = htmlCode.DocumentNode.SelectNodes("//a[@href]");
 
-                foreach(var node in href)
+                foreach (var node in href)
                 {
                     HtmlAttribute attribute = node.Attributes["href"];
                     if (attribute.Value.Contains("a"))
                     {
                         _AllUrls.Add(attribute.Value);
                     }
-                    
                 }
 
-                for (int index = 0; index < _AllUrls.Count - 1; index++)
-                {
 
-                    for (int matcher = -1; matcher < _AllUrls.Count - 1; matcher++)
+                // Remove Duplicate & Unknown URLs
+                for (int index = 0; index <= _AllUrls.Count - 1; index++)
+                {
+                    for (int matcher = 0; matcher < _AllUrls.Count; matcher++)
                     {
                         if (_AllUrls[index] == _AllUrls[matcher])
                         {
                             _AllUrls.RemoveAt(index);
                             //_AllUrls.Add(_AllUrls[index]);
                         }
+                        else if (!_AllUrls[index].StartsWith(inPut.Url))
+                        {
+                            _AllUrls.RemoveAt(index);
+                        }
                     }
-                                        
                 }
 
-                for (int i = 0; i < _AllUrls.Count; i++)
+
+                // Deep checker (Crawl more & more urls)
+
+                for (int i = 0; i < 50; i++)
                 {
                     HtmlWeb htmlWeb = new HtmlWeb();
                     var htmlLoad = htmlWeb.Load(_AllUrls[i]);
@@ -67,11 +75,19 @@ namespace WebsiteCrawler.Controllers
                         if (htmlAttribute.Value.Contains("a"))
                         {
                             _AllUrls.Add(htmlAttribute.Value);
+
+                            // Remove Unknown URLs
+                            for (int index = 0; index < _AllUrls.Count - 1; index++)
+                            {
+                                if (!_AllUrls[index].StartsWith(inPut.Url))
+                                {
+                                    _AllUrls.RemoveAt(index);
+                                }
+                            }
                         }
                     }
-
+                    
                 }
-
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
@@ -79,5 +95,6 @@ namespace WebsiteCrawler.Controllers
                 return View(ex);
             }
         }
+
     }
 }
