@@ -40,11 +40,12 @@ namespace WebsiteCrawler.Controllers
                     
                 }
 
-                for (int index = 0; index <= _AllUrls.Count; index++)
+                for (int index = 0; index < _AllUrls.Count - 1; index++)
                 {
-                    for (int reverseIndex = 0; reverseIndex <= _AllUrls.Count; reverseIndex++)
+
+                    for (int matcher = -1; matcher < _AllUrls.Count - 1; matcher++)
                     {
-                        if (_AllUrls[index] == _AllUrls[reverseIndex])
+                        if (_AllUrls[index] == _AllUrls[matcher])
                         {
                             _AllUrls.RemoveAt(index);
                             //_AllUrls.Add(_AllUrls[index]);
