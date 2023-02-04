@@ -62,7 +62,7 @@ namespace WebsiteCrawler.Controllers
 
                 // Deep checker (Crawl more & more urls)
 
-                for (int i = 0; i < 50; i++)
+                for (int i = 0; i < _AllUrls.Count - 1; i++)
                 {
                     HtmlWeb htmlWeb = new HtmlWeb();
                     var htmlLoad = htmlWeb.Load(_AllUrls[i]);
@@ -86,8 +86,20 @@ namespace WebsiteCrawler.Controllers
                             }
                         }
                     }
-                    
                 }
+
+                for (int index = 0; index <= _AllUrls.Count - 1; index++)
+                {
+                    for (int matcher = 0; matcher < _AllUrls.Count; matcher++)
+                    {
+                        if (_AllUrls[index] == _AllUrls[matcher])
+                        {
+                            _AllUrls.RemoveAt(index);
+                            //_AllUrls.Add(_AllUrls[index]);
+                        }
+                    }
+                }
+
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
