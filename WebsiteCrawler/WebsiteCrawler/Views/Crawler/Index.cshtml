@@ -21,23 +21,63 @@
 
 
 <div class="row">
-    <div class="col-12 col-md-8">
-
-        <ul class="list-group">
-            @{
-                for (int i = 1; i <= 10; i++)
-                {
-                    <li class="list-group-item list-group-item-action list-group-item-primary">
-                        <div class="d-flex">
-                            <strong>@i &nbsp; </strong>
-                            <a href="https://google.com/">https://google.com/</a>
-                            &nbsp; &nbsp;<span class="badge bg-primary">200</span>
-                        </div>
-                    </li>
-                }
-            }
-        </ul>
-
+    <div class="col">
+      Export
     </div>
-    <div class="col-6 col-md-4"></div>
-</div>
+    <div class="col">
+      Export
+    </div>
+    <div class="col">
+      Export
+    </div>
+  </div>
+<div class="row">
+    <div class="col">
+            <ul class="list-group">
+                @{
+                    for (int i = 1; i <= 10; i++)
+                    {
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <div class="d-flex">
+                                <strong>@i &nbsp; </strong>
+                                <a href="https://google.com/">https://google.com/</a>
+                                &nbsp; &nbsp;<span class="badge bg-primary">200</span>
+                            </div>
+                        </li>
+                    }
+                }
+            </ul>
+    </div>
+    <div class="col">
+            <ul class="list-group">
+                @{
+                    for (int i = 1; i <= 10; i++)
+                    {
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <div class="d-flex">
+                                <strong>@i &nbsp; </strong>
+                                <a href="https://google.com/">https://google.com/</a>
+                                &nbsp; &nbsp;<span class="badge bg-warning">400</span>
+                            </div>
+                        </li>
+                    }
+                }
+            </ul>
+    </div>
+    <div class="col">
+            <ul class="list-group">
+                @{
+                    for (int i = 1; i <= 10; i++)
+                    {
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <div class="d-flex">
+                                <strong>@i &nbsp; </strong>
+                                <a href="https://google.com/">https://google.com/</a>
+                                &nbsp; &nbsp;<span class="badge bg-secondary">500</span>
+                            </div>
+                        </li>
+                    }
+                }
+            </ul>
+    </div>
+  </div>

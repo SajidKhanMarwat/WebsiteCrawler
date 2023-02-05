@@ -2,6 +2,8 @@
 using HtmlAgilityPack;
 using WebsiteCrawler.Models;
 using System.Linq;
+using System.Net;
+using Microsoft.AspNetCore.Components.Forms;
 
 namespace WebsiteCrawler.Controllers
 {
@@ -52,10 +54,10 @@ namespace WebsiteCrawler.Controllers
                             _AllUrls.RemoveAt(index);
                             //_AllUrls.Add(_AllUrls[index]);
                         }
-                        else if (!_AllUrls[index].StartsWith(inPut.Url))
-                        {
-                            _AllUrls.RemoveAt(index);
-                        }
+                        //else if (!_AllUrls[index].StartsWith(inPut.Url))
+                        //{
+                        //    _AllUrls.RemoveAt(index);
+                        //}
                     }
                 }
 
@@ -66,8 +68,19 @@ namespace WebsiteCrawler.Controllers
                 {
                     HtmlWeb htmlWeb = new HtmlWeb();
                     var htmlLoad = htmlWeb.Load(_AllUrls[i]);
-                    var hrefSeperated = htmlLoad.DocumentNode.SelectNodes("//a[@href]");
+                    
+                    
+                    // Status Code Storing
+                    //string url = _AllUrls[i];
+                    //var request = HttpWebRequest.Create(url);
+                    //var response = request.GetResponse() as HttpWebResponse;
+                    //var statusCode = response.StatusCode;
+                    //int statusInt = Convert.ToInt32(statusCode.ToString());
 
+
+
+
+                    var hrefSeperated = htmlLoad.DocumentNode.SelectNodes("//a[@href]");
                     foreach (var listItem in hrefSeperated)
                     {
                         HtmlAttribute htmlAttribute = listItem.Attributes["href"];
@@ -88,7 +101,7 @@ namespace WebsiteCrawler.Controllers
                     }
                 }
 
-                for (int index = 0; index <= _AllUrls.Count - 1; index++)
+                for (int index = 0; index < _AllUrls.Count - 1; index++)
                 {
                     for (int matcher = 0; matcher < _AllUrls.Count; matcher++)
                     {
