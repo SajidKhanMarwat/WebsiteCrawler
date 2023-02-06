@@ -78,8 +78,6 @@ namespace WebsiteCrawler.Controllers
                     //int statusInt = Convert.ToInt32(statusCode.ToString());
 
 
-
-
                     var hrefSeperated = htmlLoad.DocumentNode.SelectNodes("//a[@href]");
                     foreach (var listItem in hrefSeperated)
                     {
@@ -115,7 +113,7 @@ namespace WebsiteCrawler.Controllers
                     }
                 }
 
-                return RedirectToAction("Index");
+                return View(_AllUrls);
             }
             catch (Exception ex)
             {
