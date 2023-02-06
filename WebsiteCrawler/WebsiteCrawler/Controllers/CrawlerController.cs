@@ -99,16 +99,18 @@ namespace WebsiteCrawler.Controllers
                             }
                         }
                     }
-                }
 
-                for (int index = 0; index < _AllUrls.Count - 1; index++)
-                {
-                    for (int matcher = 0; matcher < _AllUrls.Count; matcher++)
+
+                    // Remove Duplicates
+                    for (int index = 0; index < _AllUrls.Count - 1; index++)
                     {
-                        if (_AllUrls[index] == _AllUrls[matcher])
+                        for (int matcher = 0; matcher < _AllUrls.Count; matcher++)
                         {
-                            _AllUrls.RemoveAt(index);
-                            //_AllUrls.Add(_AllUrls[index]);
+                            if (_AllUrls[index] == _AllUrls[matcher])
+                            {
+                                _AllUrls.RemoveAt(index);
+                                //_AllUrls.Add(_AllUrls[index]);
+                            }
                         }
                     }
                 }
