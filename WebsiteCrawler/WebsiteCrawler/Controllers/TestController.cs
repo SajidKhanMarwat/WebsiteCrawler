@@ -8,7 +8,7 @@ using System.Security.Policy;
 
 namespace WebsiteCrawler.Controllers
 {
-    public class CrawlerController : Controller
+    public class TestController : Controller
     {
         HashSet<string> _InitialUrls = new HashSet<string>();
         //List<string> _AllUrls = new List<string>();
@@ -19,6 +19,7 @@ namespace WebsiteCrawler.Controllers
         {
             return View();
         }
+
 
         [HttpPost]
         public IActionResult Index(URL inPut)
@@ -46,20 +47,20 @@ namespace WebsiteCrawler.Controllers
 
                 // Deep checker (Crawl more & more urls)
 
-                foreach (var url in _InitialUrls)
+                foreach(var url in _InitialUrls)
                 {
                     if (url.StartsWith(inPut.Url))
                     {
                         HtmlWeb htmlWeb = new HtmlWeb();
                         var htmlLoad = htmlWeb.Load(url); // Loading the HTML of the particular WebPages
-
+                        
                         // Getting the Status of the specified URL
                         var request = HttpWebRequest.Create(url);
                         var response = request.GetResponse() as HttpWebResponse;
 
                         StatusURL statusURL = new StatusURL(); // Creating StatusURL Object for storing URL & Status in the List
                         statusURL.Url = url;
-                        statusURL.Status = (Int32)response.StatusCode;
+                        statusURL.Status = (Int32) response.StatusCode;
                         _UrlsWithStatus.Add(statusURL);
 
                         var hrefSeperated = htmlLoad.DocumentNode.SelectNodes("//a[@href]");
@@ -96,5 +97,6 @@ namespace WebsiteCrawler.Controllers
                 return View(ex);
             }
         }
+
     }
 }

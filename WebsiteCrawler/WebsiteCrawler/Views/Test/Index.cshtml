@@ -1,0 +1,82 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<br />
+
+<form asp-action="Index" class="input-group mb-3">
+    <input name="Url" type="text" class="form-control" placeholder="Enter A URL" aria-label="Url" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+        <button name="Crawl" class="btn btn-outline-secondary" type="submit">Crawl Now</button>
+    </div>
+</form>
+
+
+<br />
+<br />
+
+
+<div class="row">
+    <div class="col">
+        Export
+    </div>
+    <div class="col">
+        Export
+    </div>
+    <div class="col">
+        Export
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <ul class="list-group">
+            @{
+                for (int i = 1; i <= 10; i++)
+                {
+                    <li class="list-group-item list-group-item-action list-group-item-primary">
+                        <div class="d-flex">
+                            <strong>@i &nbsp; </strong>
+                            <a href="https://google.com/">https://google.com/</a>
+                            &nbsp; &nbsp;<span class="badge bg-success">200</span>
+                        </div>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+    <div class="col">
+        <ul class="list-group">
+            @{
+                for (int i = 1; i <= 10; i++)
+                {
+                    <li class="list-group-item list-group-item-action list-group-item-primary">
+                        <div class="d-flex">
+                            <strong>@i &nbsp; </strong>
+                            <a href="https://google.com/">https://google.com/</a>
+                            &nbsp; &nbsp;<span class="badge bg-warning">400</span>
+                        </div>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+    <div class="col">
+        <ul class="list-group">
+            @{
+                for (int i = 1; i <= 10; i++)
+                {
+                    <li class="list-group-item list-group-item-action list-group-item-primary">
+                        <div class="d-flex">
+                            <strong>@i &nbsp; </strong>
+                            <a href="https://google.com/">https://google.com/</a>
+                            &nbsp; &nbsp;<span class="badge bg-secondary">500</span>
+                        </div>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</div>

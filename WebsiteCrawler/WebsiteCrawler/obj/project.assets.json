@@ -9735,23 +9735,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Apollo\\.nuget\\packages\\": {},
+    "C:\\Users\\khannsaj\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Apollo\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\WebsiteCrawler\\WebsiteCrawler.csproj",
+      "projectUniqueName": "C:\\Users\\khannsaj\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\WebsiteCrawler\\WebsiteCrawler.csproj",
       "projectName": "WebsiteCrawler",
-      "projectPath": "C:\\Users\\Apollo\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\WebsiteCrawler\\WebsiteCrawler.csproj",
-      "packagesPath": "C:\\Users\\Apollo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Apollo\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\WebsiteCrawler\\obj\\",
+      "projectPath": "C:\\Users\\khannsaj\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\WebsiteCrawler\\WebsiteCrawler.csproj",
+      "packagesPath": "C:\\Users\\khannsaj\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\khannsaj\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\WebsiteCrawler\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Apollo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\khannsaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9760,14 +9760,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Apollo\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\BusinessLogics\\BusinessLogics.csproj": {
-              "projectPath": "C:\\Users\\Apollo\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\BusinessLogics\\BusinessLogics.csproj"
+            "C:\\Users\\khannsaj\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\BusinessLogics\\BusinessLogics.csproj": {
+              "projectPath": "C:\\Users\\khannsaj\\Desktop\\WebsiteCrawler\\WebsiteCrawler\\BusinessLogics\\BusinessLogics.csproj"
             }
           }
         }
@@ -9814,7 +9815,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

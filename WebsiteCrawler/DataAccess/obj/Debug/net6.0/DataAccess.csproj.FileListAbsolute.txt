@@ -1,15 +1,3 @@
-C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
-C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\bin\Debug\net6.0\DataAccess.dll
-C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\bin\Debug\net6.0\DataAccess.pdb
-C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
-C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
-C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
-C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
-C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\obj\Debug\net6.0\DataAccess.dll
-C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
-C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\obj\Debug\net6.0\DataAccess.pdb
-C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
 C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
 C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\bin\Debug\net6.0\DataAccess.dll
 C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\bin\Debug\net6.0\DataAccess.pdb
