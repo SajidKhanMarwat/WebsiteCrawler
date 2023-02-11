@@ -53,15 +53,6 @@ namespace WebsiteCrawler.Controllers
                         HtmlWeb htmlWeb = new HtmlWeb();
                         var htmlLoad = htmlWeb.Load(url); // Loading the HTML of the particular WebPages
 
-                        // Getting the Status of the specified URL
-                        var request = HttpWebRequest.Create(url);
-                        var response = request.GetResponse() as HttpWebResponse;
-
-                        StatusURL statusURL = new StatusURL(); // Creating StatusURL Object for storing URL & Status in the List
-                        statusURL.Url = url;
-                        statusURL.Status = (Int32)response.StatusCode;
-                        _UrlsWithStatus.Add(statusURL);
-
                         var hrefSeperated = htmlLoad.DocumentNode.SelectNodes("//a[@href]");
 
                         //for (int i = 0; i <= hrefSeperated.Count - 1; i++)
@@ -82,6 +73,17 @@ namespace WebsiteCrawler.Controllers
                                 _InitialUrls.Add(htmlAttribute.Value);
                             }
                         }
+
+
+                        // Getting the Status of the specified URL
+                        var request = HttpWebRequest.Create(url);
+                        var response = request.GetResponse() as HttpWebResponse;
+
+                        StatusURL statusURL = new StatusURL(); // Creating StatusURL Object for storing URL & Status in the List
+                        statusURL.Url = url;
+                        statusURL.Status = (Int32)response.StatusCode;
+                        _UrlsWithStatus.Add(statusURL);
+
                     }
                     else
                     {
