@@ -49,21 +49,23 @@ namespace WebsiteCrawler.Controllers
 
                 foreach (var url in _InitialUrls)
                 {
+                    if (!url.StartsWith(inPut.Url))
+                    {
+                        string str = inPut.Url;
+                        if (inPut.Url.EndsWith("/"))
+                        {
+                            str.Substring(0, str.LastIndexOf('/'));
+                            inPut.Url = str;
+                        }
+
+                        inPut.Url = inPut.Url + url;
+                    }
                     if (url.StartsWith(inPut.Url))
                     {
                         HtmlWeb htmlWeb = new HtmlWeb();
                         var htmlLoad = htmlWeb.Load(url); // Loading the HTML of the particular WebPages
 
                         var hrefSeperated = htmlLoad.DocumentNode.SelectNodes("//a[@href]");
-
-                        //for (int i = 0; i <= hrefSeperated.Count - 1; i++)
-                        //{
-                        //    HtmlAttribute htmlAttribute = hrefSeperated[i].Attributes["href"];
-                        //    if (htmlAttribute.Value.Contains("a"))
-                        //    {
-                        //        _InitialUrls.Add(htmlAttribute.Value);
-                        //    }
-                        //}
 
                         foreach (var listItem in hrefSeperated)
                         {
@@ -88,20 +90,13 @@ namespace WebsiteCrawler.Controllers
                     {
                         continue;
                     }
+
+                    if (_InitialUrls.Count != _NewURLs.Count)
+                    {
+                        continue;
+                    }
                 }
 
-                //foreach (var item in _NewURLs)
-                //{
-                //    if (_NewURLs.Contains(item) == _InitialUrls.Any())
-                //    {
-                //        continue;
-                //    }
-                //    else if(item.StartsWith(inPut.Url))
-                //    {
-                //        _InitialUrls.Add(item);
-                //    }
-                //}
-                
                 return View(_UrlsWithStatus);
             }
             catch (Exception ex)

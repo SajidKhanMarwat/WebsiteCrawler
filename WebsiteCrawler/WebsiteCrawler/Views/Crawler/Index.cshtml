@@ -40,10 +40,10 @@
             {
                 foreach (var item in Model.Where(x => x.Status == 200))
                 {
-                    int inc2 = 0;
+                    @*int inc2 = 0;*@
                     <li class="list-group-item list-group-item-action list-group-item-primary">
                         <div class="d-flex">
-                            <strong>@inc2. &nbsp; </strong>
+                            @*<strong>@inc2. &nbsp; </strong>*@
                             <a href="@item.Url">@item.Url</a>
                             &nbsp; &nbsp;<span class="badge bg-success">@item.Status</span>
                         </div>
@@ -63,10 +63,10 @@
             {
                 foreach (var item in Model.Where(x => x.Status == 400))
                 {
-                    int inc4 = 0;
+                    @*int inc4 = 0;*@
                     <li class="list-group-item list-group-item-action list-group-item-primary">
                         <div class="d-flex">
-                            <strong>@inc4. &nbsp; </strong>
+                            @*<strong>@inc4. &nbsp; </strong>*@
                             <a href="@item.Url">@item.Url</a>
                             &nbsp; &nbsp;<span class="badge bg-warning">@item.Status</span>
                         </div>
@@ -87,10 +87,10 @@
             {
                 foreach (var item in Model.Where(x => x.Status == 500))
                 {
-                    int inc5 = 0;
+                    @*int inc5 = 0;*@
                     <li class="list-group-item list-group-item-action list-group-item-primary">
                         <div class="d-flex">
-                            <strong>@inc5. &nbsp; </strong>
+                            @*<strong>@inc5. &nbsp; </strong>*@
                             <a href="@item.Url">@item.Url</a>
                             &nbsp; &nbsp;<span class="badge bg-secondary">500</span>
                         </div>
