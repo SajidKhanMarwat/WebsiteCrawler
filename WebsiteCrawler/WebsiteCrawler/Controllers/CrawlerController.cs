@@ -69,12 +69,11 @@ namespace WebsiteCrawler.Controllers
                         {
                             HtmlAttribute htmlAttribute = listItem.Attributes["href"];
 
-                            if (htmlAttribute.Value.Contains("a"))
+                            if (htmlAttribute.Value.Contains("a") && htmlAttribute.Value.StartsWith(inPut.Url))
                             {
                                 _NewURLs.Add(htmlAttribute.Value);
                             }
                         }
-
 
                         //// Getting the Status of the specified URL
                         var request = HttpWebRequest.Create(url);
@@ -84,7 +83,6 @@ namespace WebsiteCrawler.Controllers
                         statusURL.Url = url;
                         statusURL.Status = (Int32)response.StatusCode;
                         _UrlsWithStatus.Add(statusURL);
-
                     }
                     else
                     {
@@ -92,7 +90,19 @@ namespace WebsiteCrawler.Controllers
                     }
                 }
 
-                return View(_InitialUrls);
+                //foreach (var item in _NewURLs)
+                //{
+                //    if (_NewURLs.Contains(item) == _InitialUrls.Any())
+                //    {
+                //        continue;
+                //    }
+                //    else if(item.StartsWith(inPut.Url))
+                //    {
+                //        _InitialUrls.Add(item);
+                //    }
+                //}
+                
+                return View(_UrlsWithStatus);
             }
             catch (Exception ex)
             {
