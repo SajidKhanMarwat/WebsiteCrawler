@@ -11,6 +11,7 @@ namespace WebsiteCrawler.Controllers
     public class CrawlerController : Controller
     {
         HashSet<string> _InitialUrls = new HashSet<string>();
+        HashSet<string> _NewURLs = new HashSet<string>();
         //List<string> _AllUrls = new List<string>();
         List<StatusURL> _UrlsWithStatus = new List<StatusURL>();
 
@@ -70,7 +71,7 @@ namespace WebsiteCrawler.Controllers
 
                             if (htmlAttribute.Value.Contains("a"))
                             {
-                                _InitialUrls.Add(htmlAttribute.Value);
+                                _NewURLs.Add(htmlAttribute.Value);
                             }
                         }
 
