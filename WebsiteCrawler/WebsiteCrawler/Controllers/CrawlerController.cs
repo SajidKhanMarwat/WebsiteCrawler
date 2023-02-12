@@ -75,7 +75,7 @@ namespace WebsiteCrawler.Controllers
                         }
 
 
-                        // Getting the Status of the specified URL
+                        //// Getting the Status of the specified URL
                         var request = HttpWebRequest.Create(url);
                         var response = request.GetResponse() as HttpWebResponse;
 
