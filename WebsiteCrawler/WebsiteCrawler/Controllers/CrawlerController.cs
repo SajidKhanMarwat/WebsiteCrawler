@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using Microsoft.AspNetCore.Components.Forms;
 using System.Security.Policy;
+using System;
 
 namespace WebsiteCrawler.Controllers
 {
@@ -45,21 +46,26 @@ namespace WebsiteCrawler.Controllers
                     }
                 }
 
-                // Deep checker (Crawl more & more urls)
 
+                //// Removing the Trailing Slash from the list of _InitialUrls
+                //string str = inPut.Url;
+                //string seperatedURL;
+                //if (inPut.Url.Last() == '/')
+                //{
+                //    str = str.Substring(0, str.Length - 1);
+                //}
+
+                // Deep checker (Crawl more & more urls)
                 foreach (var url in _InitialUrls)
                 {
-                    if (!url.StartsWith(inPut.Url))
-                    {
-                        string str = inPut.Url;
-                        if (inPut.Url.EndsWith("/"))
-                        {
-                            str.Substring(0, str.LastIndexOf('/'));
-                            inPut.Url = str;
-                        }
-
-                        inPut.Url = inPut.Url + url;
-                    }
+                    //if (!url.StartsWith(inPut.Url))
+                    //{
+                    //    if (inPut.Url.Last() == '/')
+                    //    {
+                    //       str = str.Substring(0, str.Length - 1);
+                    //        seperatedURL = str + url;
+                    //    }
+                    //}
                     if (url.StartsWith(inPut.Url))
                     {
                         HtmlWeb htmlWeb = new HtmlWeb();
