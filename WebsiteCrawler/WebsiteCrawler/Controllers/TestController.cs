@@ -10,7 +10,8 @@ namespace WebsiteCrawler.Controllers
 {
     public class TestController : Controller
     {
-        HashSet<string> _InitialUrls = new HashSet<string>();
+        List<string> _InitialUrls = new List<string>();
+        //List<string> _UniqueURLs = new List<string>();
         //List<string> _AllUrls = new List<string>();
         List<StatusURL> _UrlsWithStatus = new List<StatusURL>();
 
@@ -19,7 +20,6 @@ namespace WebsiteCrawler.Controllers
         {
             return View();
         }
-
 
         [HttpPost]
         public IActionResult Index(URL inPut)
@@ -45,58 +45,66 @@ namespace WebsiteCrawler.Controllers
                     }
                 }
 
-                // Deep checker (Crawl more & more urls)
 
-                foreach(var url in _InitialUrls)
+                // Deep checker (Crawl more & more urls)
+                
+                for(int i = 0; i < _InitialUrls.Count; i++)
                 {
-                    if (url.StartsWith(inPut.Url))
+                    if (_InitialUrls[i].StartsWith(inPut.Url))
                     {
                         HtmlWeb htmlWeb = new HtmlWeb();
-                        var htmlLoad = htmlWeb.Load(url); // Loading the HTML of the particular WebPages
-                        
-                        // Getting the Status of the specified URL
-                        var request = HttpWebRequest.Create(url);
-                        var response = request.GetResponse() as HttpWebResponse;
-
-                        StatusURL statusURL = new StatusURL(); // Creating StatusURL Object for storing URL & Status in the List
-                        statusURL.Url = url;
-                        statusURL.Status = (Int32) response.StatusCode;
-                        _UrlsWithStatus.Add(statusURL);
+                        var htmlLoad = htmlWeb.Load(_InitialUrls[i]); // Loading the HTML of the particular WebPages
 
                         var hrefSeperated = htmlLoad.DocumentNode.SelectNodes("//a[@href]");
-
-                        //for (int i = 0; i <= hrefSeperated.Count - 1; i++)
-                        //{
-                        //    HtmlAttribute htmlAttribute = hrefSeperated[i].Attributes["href"];
-                        //    if (htmlAttribute.Value.Contains("a"))
-                        //    {
-                        //        _InitialUrls.Add(htmlAttribute.Value);
-                        //    }
-                        //}
 
                         foreach (var listItem in hrefSeperated)
                         {
                             HtmlAttribute htmlAttribute = listItem.Attributes["href"];
 
-                            if (htmlAttribute.Value.Contains("a"))
+                            if (htmlAttribute.Value.Contains("a") && htmlAttribute.Value.StartsWith(inPut.Url))
                             {
                                 _InitialUrls.Add(htmlAttribute.Value);
                             }
                         }
+
+                        // Getting the Status of the specified URL
+                        var request = HttpWebRequest.Create(_InitialUrls[i]);
+                        var response = request.GetResponse() as HttpWebResponse;
+
+                        StatusURL statusURL = new StatusURL(); // Creating StatusURL Object for storing URL & Status in the List
+                        statusURL.Url = _InitialUrls[i];
+                        statusURL.Status = (Int32)response.StatusCode;
+                        _UrlsWithStatus.Add(statusURL);
                     }
                     else
                     {
                         continue;
                     }
+
+                    if (!_InitialUrls[i].StartsWith(inPut.Url))
+                    {
+                        if (_InitialUrls[i].StartsWith("/"))
+                        {
+                            _InitialUrls[i] = inPut.Url + _InitialUrls[i].Substring(1, _InitialUrls[i].Length);
+                            _InitialUrls.Add(_InitialUrls[i]);
+                            continue;
+                        }
+                        //else
+                        //{
+                        //    inPut.Url.Substring(0, inPut.Url.Length - 1);
+                        //}
+                    }
+
+                    _InitialUrls = _InitialUrls.Distinct().ToList();
+                    
                 }
 
-                return View(_InitialUrls);
+                return View(_UrlsWithStatus);
             }
             catch (Exception ex)
             {
                 return View(ex);
             }
         }
-
     }
 }

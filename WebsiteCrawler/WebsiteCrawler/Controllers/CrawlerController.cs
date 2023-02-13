@@ -14,7 +14,7 @@ namespace WebsiteCrawler.Controllers
         HashSet<string> _InitialUrls = new HashSet<string>();
         HashSet<string> _NewURLs = new HashSet<string>();
         //List<string> _AllUrls = new List<string>();
-        List<StatusURL> _UrlsWithStatus = new List<StatusURL>();
+        HashSet<StatusURL> _UrlsWithStatus = new HashSet<StatusURL>();
 
         [HttpGet]
         public IActionResult Index()
@@ -58,14 +58,6 @@ namespace WebsiteCrawler.Controllers
                 // Deep checker (Crawl more & more urls)
                 foreach (var url in _InitialUrls)
                 {
-                    //if (!url.StartsWith(inPut.Url))
-                    //{
-                    //    if (inPut.Url.Last() == '/')
-                    //    {
-                    //       str = str.Substring(0, str.Length - 1);
-                    //        seperatedURL = str + url;
-                    //    }
-                    //}
                     if (url.StartsWith(inPut.Url))
                     {
                         HtmlWeb htmlWeb = new HtmlWeb();
@@ -97,10 +89,22 @@ namespace WebsiteCrawler.Controllers
                         continue;
                     }
 
-                    if (_InitialUrls.Count != _NewURLs.Count)
+                    if (!url.StartsWith(inPut.Url))
                     {
-                        continue;
+                        if (url.StartsWith("/"))
+                        {
+                            //url.Substring(1, url.Length);
+                            //url = null;
+                            //url = inPut.Url + url;
+
+                        }
+                        else
+                        {
+                            inPut.Url.Substring(0, inPut.Url.Length - 1);
+                        }
                     }
+                    _InitialUrls.Add(_NewURLs.FirstOrDefault());
+                    continue;
                 }
 
                 return View(_UrlsWithStatus);
