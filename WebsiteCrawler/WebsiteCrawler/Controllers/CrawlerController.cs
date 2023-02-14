@@ -11,8 +11,8 @@ namespace WebsiteCrawler.Controllers
 {
     public class CrawlerController : Controller
     {
-        HashSet<string> _InitialUrls = new HashSet<string>();
-        HashSet<string> _NewURLs = new HashSet<string>();
+        List<string> _InitialUrls = new List<string>();
+        //List<string> _UniqueURLs = new List<string>();
         //List<string> _AllUrls = new List<string>();
         HashSet<StatusURL> _UrlsWithStatus = new HashSet<StatusURL>();
 
@@ -47,21 +47,14 @@ namespace WebsiteCrawler.Controllers
                 }
 
 
-                //// Removing the Trailing Slash from the list of _InitialUrls
-                //string str = inPut.Url;
-                //string seperatedURL;
-                //if (inPut.Url.Last() == '/')
-                //{
-                //    str = str.Substring(0, str.Length - 1);
-                //}
-
                 // Deep checker (Crawl more & more urls)
-                foreach (var url in _InitialUrls)
+
+                for (int i = 0; i < _InitialUrls.Count; i++)
                 {
-                    if (url.StartsWith(inPut.Url))
+                    if (_InitialUrls[i].StartsWith(inPut.Url))
                     {
                         HtmlWeb htmlWeb = new HtmlWeb();
-                        var htmlLoad = htmlWeb.Load(url); // Loading the HTML of the particular WebPages
+                        var htmlLoad = htmlWeb.Load(_InitialUrls[i]); // Loading the HTML of the particular WebPages
 
                         var hrefSeperated = htmlLoad.DocumentNode.SelectNodes("//a[@href]");
 
@@ -71,16 +64,16 @@ namespace WebsiteCrawler.Controllers
 
                             if (htmlAttribute.Value.Contains("a") && htmlAttribute.Value.StartsWith(inPut.Url))
                             {
-                                _NewURLs.Add(htmlAttribute.Value);
+                                _InitialUrls.Add(htmlAttribute.Value);
                             }
                         }
 
-                        //// Getting the Status of the specified URL
-                        var request = HttpWebRequest.Create(url);
+                        // Getting the Status of the specified URL
+                        var request = HttpWebRequest.Create(_InitialUrls[i]);
                         var response = request.GetResponse() as HttpWebResponse;
 
                         StatusURL statusURL = new StatusURL(); // Creating StatusURL Object for storing URL & Status in the List
-                        statusURL.Url = url;
+                        statusURL.Url = _InitialUrls[i];
                         statusURL.Status = (Int32)response.StatusCode;
                         _UrlsWithStatus.Add(statusURL);
                     }
@@ -88,31 +81,30 @@ namespace WebsiteCrawler.Controllers
                     {
                         continue;
                     }
+                    _InitialUrls = _InitialUrls.Distinct().ToList();
 
-                    if (!url.StartsWith(inPut.Url))
+                    if (!_InitialUrls[i].StartsWith(inPut.Url))
                     {
-                        if (url.StartsWith("/"))
-                        {
-                            //url.Substring(1, url.Length);
-                            //url = null;
-                            //url = inPut.Url + url;
+                        string completeUrl = inPut.Url.Substring(0, inPut.Url.Length - 1) + _InitialUrls[i];
+                        _InitialUrls.Add(completeUrl);
+                        continue;
 
-                        }
-                        else
-                        {
-                            inPut.Url.Substring(0, inPut.Url.Length - 1);
-                        }
+                        //else
+                        //{
+                        //    inPut.Url.Substring(0, inPut.Url.Length - 1);
+                        //}
                     }
-                    _InitialUrls.Add(_NewURLs.FirstOrDefault());
-                    continue;
                 }
-
                 return View(_UrlsWithStatus);
             }
             catch (Exception ex)
             {
-                return View(ex);
+                if (ex.Message == "The remote server returned an error: (404) Not Found." || ex.Message == "null")
+                {
+                    return View(_UrlsWithStatus);
+                }
             }
+            return View(_UrlsWithStatus);
         }
     }
 }

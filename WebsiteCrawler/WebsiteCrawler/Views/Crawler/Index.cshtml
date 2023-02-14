@@ -1,4 +1,4 @@
-﻿@model List<StatusURL>
+﻿@model HashSet<StatusURL>
 
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -44,7 +44,7 @@
                     <li class="list-group-item list-group-item-action list-group-item-primary">
                         <div class="d-flex">
                             @*<strong>@inc2. &nbsp; </strong>*@
-                            <a href="@item.Url">@item.Url</a>
+                            <a href="@item.Url" onclick="copyText(@item.Url)">@item.Url</a>
                             &nbsp; &nbsp;<span class="badge bg-success">@item.Status</span>
                         </div>
                     </li>
@@ -67,7 +67,7 @@
                     <li class="list-group-item list-group-item-action list-group-item-primary">
                         <div class="d-flex">
                             @*<strong>@inc4. &nbsp; </strong>*@
-                            <a href="@item.Url">@item.Url</a>
+                            <a href="@item.Url" onclick="copyText(@item.Url)">@item.Url</a>
                             &nbsp; &nbsp;<span class="badge bg-warning">@item.Status</span>
                         </div>
                     </li>
@@ -91,7 +91,7 @@
                     <li class="list-group-item list-group-item-action list-group-item-primary">
                         <div class="d-flex">
                             @*<strong>@inc5. &nbsp; </strong>*@
-                            <a href="@item.Url">@item.Url</a>
+                            <a href="@item.Url" onclick="copyText(@item.Url)">@item.Url</a>
                             &nbsp; &nbsp;<span class="badge bg-secondary">500</span>
                         </div>
                     </li>
@@ -104,3 +104,17 @@
         </ul>
     </div>
 </div>
+
+
+<script>
+    function copyText(element) {
+        var text = element.getAttribute('href');
+        navigator.clipboard.writeText(text)
+            .then(function () {
+                console.log('Text copied to clipboard');
+            })
+            .catch(function () {
+                console.error('Could not copy text to clipboard');
+            });
+    }
+</script>
