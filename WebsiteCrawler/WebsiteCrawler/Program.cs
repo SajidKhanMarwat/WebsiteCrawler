@@ -1,3 +1,7 @@
+using DataAccess.DataContext;
+using DataAccess.Repo;
+using Microsoft.EntityFrameworkCore;
+
 namespace WebsiteCrawler
 {
     public class Program
@@ -8,6 +12,13 @@ namespace WebsiteCrawler
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<CrawlerDBContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("sql"));
+            });
+
+            builder.Services.AddTransient(typeof(IGenericRepo<>), typeof(GenericRepo<>));
 
             var app = builder.Build();
 

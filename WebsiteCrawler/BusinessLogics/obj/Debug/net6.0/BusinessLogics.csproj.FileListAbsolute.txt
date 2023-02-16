@@ -22,3 +22,6 @@ C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\n
 C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\net6.0\refint\BusinessLogics.dll
 C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\net6.0\BusinessLogics.pdb
 C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\net6.0\ref\BusinessLogics.dll
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\bin\Debug\net6.0\DataAccess.dll
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Debug\net6.0\BusinessLogics.csproj.CopyComplete

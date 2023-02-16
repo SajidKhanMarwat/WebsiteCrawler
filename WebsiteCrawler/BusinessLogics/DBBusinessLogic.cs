@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccess.Models;
+using DataAccess.Repo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,20 +10,21 @@ namespace BusinessLogics
 {
     public class DBBusinessLogic
     {
-        private string DBemail { get; set; }
-        private string DBpassword { get; set; }
 
+        private readonly IGenericRepo<User> _userAuth;
 
-        public string Email
+        public DBBusinessLogic(IGenericRepo<User> user)
         {
-            get { return DBemail; }
-            set { DBemail = value; }
+            user = _userAuth;
         }
 
-        public string Password
+        public Task<List<User>> GetAll()
         {
-            get { return DBpassword; }
-            set { DBpassword = value; }
+
+           var auth = _userAuth.DoAuthentication();
+
+            return null;
         }
+
     }
 }
