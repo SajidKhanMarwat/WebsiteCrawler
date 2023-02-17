@@ -557,3 +557,4 @@ C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\bin\Debug
 C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\bin\Debug\net6.0\DataAccess.dll
 C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\bin\Debug\net6.0\DataAccess.pdb
 C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\WebsiteCrawler\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
