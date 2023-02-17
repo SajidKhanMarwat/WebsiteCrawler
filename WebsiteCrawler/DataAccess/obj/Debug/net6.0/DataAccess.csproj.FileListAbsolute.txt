@@ -24,3 +24,5 @@ C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\obj\Debug\net6.
 C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
 C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\bin\Debug\net6.0\DataAccess.runtimeconfig.json
 C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
+C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\bin\Debug\net6.0\DataAccess.runtimeconfig.json
+C:\Users\khannsaj\Desktop\WebsiteCrawler\WebsiteCrawler\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
