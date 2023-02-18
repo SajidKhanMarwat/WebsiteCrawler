@@ -43,18 +43,16 @@ namespace WebsiteCrawler.Controllers
 
         public IActionResult SignUp(SignUp signUp)
         {
-            CrawlerDBContext crawlerDBContext = new CrawlerDBContext();
+            DBBusinessLogic dBBusinessLogic = new DBBusinessLogic();
+            dBBusinessLogic.NewUserAdding(signUp);
 
-            var new_user = new User()
-            {
-                FirstName = signUp.FirstName,
-                LastName = signUp.LastName,
-                Email = signUp.Email,
-                Password = signUp.Password,
-            };
-
-            crawlerDBContext.Users.Add(new_user);
-            crawlerDBContext.SaveChanges();
+            //dBBusinessLogic.NewUserAdding(new SignUp
+            //{
+            //    FirstName = signUp.FirstName,
+            //    LastName = signUp.LastName,
+            //    Email = signUp.Email,
+            //    Password = signUp.Password
+            //});
 
             return View();
         }
