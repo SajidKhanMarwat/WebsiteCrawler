@@ -44,17 +44,16 @@ namespace WebsiteCrawler.Controllers
         public IActionResult SignUp(SignUp signUp)
         {
             DBBusinessLogic dBBusinessLogic = new DBBusinessLogic();
-            dBBusinessLogic.NewUserAdding(signUp);
 
-            //dBBusinessLogic.NewUserAdding(new SignUp
-            //{
-            //    FirstName = signUp.FirstName,
-            //    LastName = signUp.LastName,
-            //    Email = signUp.Email,
-            //    Password = signUp.Password
-            //});
-
-            return View();
+            if (signUp.FirstName != null && signUp.Email != null && signUp.Password != null)
+            {
+                dBBusinessLogic.NewUserAdding(signUp.FirstName, signUp.LastName, signUp.Email, signUp.Password);
+                return RedirectToAction("Login", "Users");
+            }
+            else
+            {
+                return View();
+            }
         }
 
     }

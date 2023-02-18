@@ -12,7 +12,7 @@ namespace BusinessLogics
 {
     public class DBBusinessLogic
     {
-        private readonly IEnumerable<CrawlerDBContext>? _userAuth;
+        //private readonly IEnumerable<CrawlerDBContext>? _userAuth;
         CrawlerDBContext crawlerDBContext = new CrawlerDBContext();
 
 
@@ -24,21 +24,23 @@ namespace BusinessLogics
         }
 
         // Adding new user to Database
-        public void NewUserAdding(UserDbData newUserData)
+        public void NewUserAdding(string fn, string ln, string email, string password)
         {
             CrawlerDBContext crawlerDBContext = new CrawlerDBContext();
 
-            var new_user = new User()
+            var adduser = new User()
             {
-                FirstName = newUserData.FirstName,
-                LastName = newUserData.LastName,
-                Email = newUserData.Email,
-                Password = newUserData.Password,
+                FirstName = fn,
+                LastName = ln,
+                Email = email,
+                Password = password
             };
 
-            crawlerDBContext.Users.Add(new_user);
-            crawlerDBContext.SaveChanges();
+            if (adduser.FirstName != null || adduser.Email != null || adduser.Password != null)
+            {
+                crawlerDBContext.Users.Add(adduser);
+                crawlerDBContext.SaveChanges();
+            }
         }
-        
     }
 }
