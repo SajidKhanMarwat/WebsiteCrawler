@@ -1,5 +1,6 @@
 using DataAccess.DataContext;
 using DataAccess.Repo;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 namespace WebsiteCrawler
@@ -20,6 +21,12 @@ namespace WebsiteCrawler
 
             builder.Services.AddTransient(typeof(IGenericRepo<>), typeof(GenericRepo<>));
 
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(option =>
+            {
+                option.LoginPath = "/Users/Login";
+                option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -31,10 +38,12 @@ namespace WebsiteCrawler
 
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

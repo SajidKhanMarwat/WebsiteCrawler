@@ -8,9 +8,14 @@ using System.Security.Policy;
 using System;
 using Microsoft.Build.Framework;
 using BusinessLogics;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.AspNetCore.Authentication;
 
 namespace WebsiteCrawler.Controllers
 {
+    [Authorize]
     public class CrawlerController : Controller
     {
         List<string> _InitialUrls = new List<string>();
@@ -108,5 +113,13 @@ namespace WebsiteCrawler.Controllers
             }
             return View(_UrlsWithStatus);
         }
+
+
+        public async Task<IActionResult> LogOut()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Login", "Users");
+        }
+
     }
 }
