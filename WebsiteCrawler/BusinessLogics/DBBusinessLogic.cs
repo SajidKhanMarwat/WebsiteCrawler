@@ -1,4 +1,5 @@
-﻿using DataAccess.Models;
+﻿using DataAccess.DataContext;
+using DataAccess.Models;
 using DataAccess.Repo;
 using System;
 using System.Collections.Generic;
@@ -10,21 +11,14 @@ namespace BusinessLogics
 {
     public class DBBusinessLogic
     {
+        private readonly IEnumerable<CrawlerDBContext>? _userAuth;
+        CrawlerDBContext crawlerDBContext = new CrawlerDBContext();
 
-        private readonly IGenericRepo<User> _userAuth;
-
-        public DBBusinessLogic(IGenericRepo<User> user)
+        public bool UserAuthentication(string email, string password)
         {
-            user = _userAuth;
+            var authData = crawlerDBContext.Users.Any(x => x.Email == email && x.Password == password);
+            return authData;
         }
-
-        public Task<List<User>> GetAll()
-        {
-
-           var auth = _userAuth.DoAuthentication();
-
-            return null;
-        }
-
+        
     }
 }
