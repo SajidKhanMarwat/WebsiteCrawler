@@ -1,0 +1,15 @@
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\bin\Release\net6.0\BusinessLogics.deps.json
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\bin\Release\net6.0\BusinessLogics.dll
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\bin\Release\net6.0\BusinessLogics.pdb
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\bin\Release\net6.0\DataAccess.dll
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\bin\Release\net6.0\DataAccess.pdb
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Release\net6.0\BusinessLogics.csproj.AssemblyReference.cache
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Release\net6.0\BusinessLogics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Release\net6.0\BusinessLogics.AssemblyInfoInputs.cache
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Release\net6.0\BusinessLogics.AssemblyInfo.cs
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Release\net6.0\BusinessLogics.csproj.CoreCompileInputs.cache
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Release\net6.0\BusinessLogics.csproj.CopyComplete
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Release\net6.0\BusinessLogics.dll
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Release\net6.0\refint\BusinessLogics.dll
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Release\net6.0\BusinessLogics.pdb
+C:\Users\Apollo\Desktop\WebsiteCrawler\WebsiteCrawler\BusinessLogics\obj\Release\net6.0\ref\BusinessLogics.dll

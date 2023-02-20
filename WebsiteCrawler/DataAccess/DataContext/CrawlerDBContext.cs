@@ -25,7 +25,7 @@ namespace DataAccess.DataContext
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server = (local); Database=CrawlerDB; Integrated Security=True;");
+                optionsBuilder.UseSqlServer("Server = CrawlerDB.mssql.somee.com; Database=CrawlerDB; User Id = sajidmarwat_SQLLogin_1; Password = c18ipuge7a;");
             }
         }
 
